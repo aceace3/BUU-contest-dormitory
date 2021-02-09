@@ -1,0 +1,62 @@
+//
+ //教师端 学生列表
+ //
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">高校智慧宿舍系统</view>
+</cu-custom>
+<view class="cu-bar bg-white " style="margin-top:0">
+  <view class="action">
+    <text class="cuIcon-title text-orange "></text><text> {{className}}</text>
+  </view>
+  <view class="action">
+    <button bindtap="showModal"class="cu-btn bg-green shadow"data-target="DialogModal1"role="button"aria-disabled="false">删除            </button>
+  </view>
+</view>
+<!-- modal -->
+<view class="cu-modal {{modalName=='DialogModal1'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">删除</view>
+      <view class="action" bindtap="hideModal">
+        <text class="cuIcon-close text-red"></text>
+      </view>
+    </view>
+    <view class="padding-xl">
+      <view>确定要删除该班级吗</view>
+      <view>注意：删除后将无法恢复！</view>
+    </view>
+    <view class="cu-bar bg-white justify-end">
+      <view class="action">
+        <button class="cu-btn line-green text-green" bindtap="hideModal">取消</button>
+        <button class="cu-btn bg-green margin-left" bindtap="hideModal">确定</button>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+
+
+
+<view class="padding-sm radius shadow bg-white" style=" margin-top:5px">
+<view wx:for="{{allList}}">
+  <view class="cu-list menu">
+    <view class="cu-item">
+      <view class="content">
+        <text class="cuIcon-check text-purple"></text><text class="text-grey" style="margin-right:5px">{{item[0]}}</text>
+      </view>
+      <view class="content">
+        <text class="text-gray" style="margin-right:10px">{{item[1]}}</text>
+        <text class="text-gray" style="margin-right:10px">{{item[2]}}</text>
+      </view>
+      <!-- <view class="content">
+        <text class="text-gray " style="margin-right:10px">未打卡：0 天</text> 
+      </view>     -->
+    </view>
+</view>
+
+    
+
+  </view>
+</view>

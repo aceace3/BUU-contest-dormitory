@@ -1,0 +1,166 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"enhance": true,
+		"postcss": true,
+		"preloadBackgroundData": false,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"nodeModules": true,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"compileHotReLoad": false,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"useIsolateContext": true,
+		"useCompilerModule": false,
+		"userConfirmedUseCompilerModuleSwitch": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.4.2",
+	"appid": "wxf30e2235c2c5aab1",
+	"projectname": "%E5%AE%BF%E8%88%8D%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9FTemp",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "calendar",
+					"pathName": "pages/calendar/calendar",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/teacherFunc/teacherFunc",
+					"pathName": "pages/teacherFunc/teacherFunc",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/teacherMe/teacherMe",
+					"pathName": "pages/teacherMe/teacherMe",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/stuFunc/stuFunc",
+					"pathName": "pages/stuFunc/stuFunc",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/myClassFunc/myClassFunc",
+					"pathName": "pages/myClassFunc/myClassFunc",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/classStuList/classStuList",
+					"pathName": "pages/classStuList/classStuList",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/addClass/addClass",
+					"pathName": "pages/addClass/addClass",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/stuRegister/stuRegister",
+					"pathName": "pages/stuRegister/stuRegister",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/leaveApproval/leaveApproval",
+					"pathName": "pages/leaveApproval/leaveApproval",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/askForLeaveFunc/askForLeaveFunc",
+					"pathName": "pages/askForLeaveFunc/askForLeaveFunc",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/newCalendar/newCalendar",
+					"pathName": "pages/newCalendar/newCalendar",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/teacherRegister/teacherRegister",
+					"pathName": "pages/teacherRegister/teacherRegister",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/stuMain/stuMain",
+					"pathName": "pages/stuMain/stuMain",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/askForLeaveRecord/askForLeaveRecord",
+					"pathName": "pages/askForLeaveRecord/askForLeaveRecord",
+					"scene": null
+				}
+			]
+		}
+	}
+}

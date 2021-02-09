@@ -1,0 +1,88 @@
+//
+//教师端我的页
+//
+<cu-custom bgColor="bg-gradual-blue">
+  <view slot="content">高校智慧宿舍系统</view>
+</cu-custom>
+
+
+<view class="cu-bar  solid-bottom" style="background:#f5d985;width:100%;margin-top:0">
+  <view class="action">
+    <text class="cuIcon-title text-blue"></text>公告
+  </view>
+  <view class="action">
+    <view style="display:{{displayOne}}">
+        <button class="cu-btn" bindtap="btnUpdate">修改</button>    
+    </view>
+    <view style="display:{{displayTwo}}">
+        <button class="cu-btn" bindtap="btnCancel">取消</button>    
+    </view>
+  </view>
+</view>
+<view class="padding bg-white" style="background:#fef2ce;width:100%">
+  <view style="display:{{displayOne}}">
+    <view class="text-left padding">{{boardContent}}</view>
+    <view class="text-left padding"> </view>
+    <view class="text-left padding"> </view>
+  </view>
+  <view style="display:{{displayTwo}}">
+    <view class="align-start">
+      <view class="title text-black">修改内容：</view>
+      <textarea maxlength="-1"  bindinput="textareaInput" placeholder="{{boardContent}}" style="border:1px silver solid;width:100%;background:white" ></textarea>
+      <view class="content">
+        <button bindtap="btnOk">ok</button>      
+      </view>
+      
+    </view>
+  </view>
+</view>
+
+<view class="padding-sm radius shadow-warp bg-white" style=" margin-top:15px">
+  <view class="cu-list menu">
+    <view class="cu-item">
+      <view class="content">
+        <text class="cuIcon-circlefill text-green"></text><text class="text-grey">姓名</text><text style='display:inline-block;width:20px'></text><text class="text-grey">{{teacherName}}</text>
+      </view>
+    </view>
+
+    <view class="cu-item">
+      <view class="content">
+        <text class="cuIcon-circlefill text-green"></text><text class="text-grey">身份</text><text style='display:inline-block;width:20px'></text><text class="text-grey">{{userRole}}</text>
+      </view>
+    </view>
+
+    
+
+  </view>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<view class="box">
+  <view class="cu-bar tabbar bg-white"  style="position:fixed; bottom:0;width:750rpx">
+    <view class="action" bindtap="gotoTeacherFunc">
+      <view class="cuIcon-cu-image">
+        <image src="/images/tabbar/basics.png"></image>
+      </view>
+      <view class="text-green">功能</view>
+    </view>
+    
+    <view class="action">
+      <view class="cuIcon-cu-image">
+        <image src="/images/tabbar/about_cur.png"></image>
+        <!-- <view class="cu-tag badge"></view> -->
+      </view>
+      <view class="text-gray">我的</view>
+    </view>
+  </view>
+</view>

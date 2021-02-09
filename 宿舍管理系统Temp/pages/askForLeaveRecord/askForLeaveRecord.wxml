@@ -1,0 +1,45 @@
+//
+//学生端请假记录页
+//
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">高校智慧宿舍系统</view>
+</cu-custom>
+<view class="cu-bar bg-white solid-bottom">
+    <view class="action">
+      <text class="cuIcon-title text-orange "></text> 消息列表
+    </view>
+  </view>
+<view wx:for="{{dataList}}">
+    <view class="cu-list menu-avatar">
+      <view class="cu-item">
+        <view class="cu-avatar round lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10001.jpg);"></view>
+        <view class="content">
+          <view class="text-grey">{{item[0]}}</view>
+          <view class="text-gray text-sm flex">
+            <text class="text-cut">{{replyText}}</text>
+          </view>
+        </view>
+        <view class="action">
+          <view class="text-grey text-xs">{{item[3]}}</view>
+          <view class="cu-tag round bg-blue sm">{{item[2]}}</view>
+        </view>
+      </view>
+</view>
+
+    <!-- <view class="cu-list menu-avatar">
+    <view class="cu-item">
+      <view class="cu-avatar round lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10001.jpg);"></view>
+      <view class="content">
+        <view class="text-grey">王老师</view>
+        <view class="text-gray text-sm flex">
+          <text class="text-cut">去吧</text>
+        </view>
+      </view>
+      <view class="action">
+        <view class="text-grey text-xs">2020-02-01 22:20</view>
+        <view class="cu-tag round bg-green sm">准假</view>
+      </view>
+    </view>
+  </view> -->
+</view>

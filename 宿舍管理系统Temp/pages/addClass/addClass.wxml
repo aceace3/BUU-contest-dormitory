@@ -1,0 +1,24 @@
+//
+ //教师端 新建班级
+ //
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">高校智慧宿舍系统</view>
+</cu-custom>
+<view class="cu-bar justify-left bg-white">
+    <view class="action border-title">
+      <text class="text-xl text-bold">添加班级</text>
+      <text class="bg-grey" style="width:2rem"></text>
+      <!-- 底部样式 last-child选择器-->
+    </view>
+  </view>
+  <form>
+    <view class="cu-form-group margin-top">
+      <view class="title">班级名称</view>
+      <input bindinput="className"></input>
+    </view>
+    
+    <view class="padding flex flex-direction">
+      <button class="cu-btn bg-blue lg" bindtap="subBtn">提交</button>
+    </view>
+  </form>

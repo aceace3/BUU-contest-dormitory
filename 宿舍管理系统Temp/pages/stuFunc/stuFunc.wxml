@@ -1,0 +1,44 @@
+//
+//学生端功能页
+//
+<cu-custom bgColor="bg-gradual-blue">
+  <view slot="content">高校智慧宿舍系统</view>
+</cu-custom>
+<view class="cu-bar bg-white solid-bottom" style="margin-top:0">
+    <view class="action">
+      <text class="cuIcon-title text-orange "></text> 功能
+    </view>
+</view>
+
+ <view class="bg-white padding">
+    <view class="grid col-2 margin-bottom text-center">
+      <view class="padding" style="height:140px;border-right:solid 1px #f1f1f1;border-bottom:solid 1px #f1f1f1;line-height:110px;">
+        <view class="text-center text-shadow text-purle">
+          <button class="cu-btn line-purple" role="button" aria-disabled="false" style="height:100px;width:100%" bindtap="gotoAFLRecord">
+            <text class="cuIcon-sort lg text-purple"></text><text style='display:inline-block;width:5px'></text>请假记录
+          </button>
+        </view>
+      </view>
+      <view class="padding" style="height:140px;border-bottom:solid 1px #f1f1f1;line-height:110px">
+         <view class="text-center text-shadow text-purle">
+          <button class="cu-btn line-purple" role="button" aria-disabled="false" style="height:100px;width:100%" bindtap="gotoCalendar">
+            <text class="cuIcon-sort lg text-purple"></text><text style='display:inline-block;width:5px'></text>考勤记录
+          </button>
+        </view>
+      </view>
+       <view class="padding" style="height:140px;border-right:solid 1px #f1f1f1;line-height:110px">
+         <view class="text-center text-shadow text-purle">
+          <button class="cu-btn line-purple" role="button" aria-disabled="false" style="height:100px;width:100%" bindtap="gotoAskForLeave">
+            <text class="cuIcon-activity lg text-purple"></text><text style='display:inline-block;width:5px'></text>请假
+          </button>
+        </view>
+      </view>
+       <!-- <view class="padding" style="height:140px;line-height:110px">
+         <view class="text-center text-shadow text-purle">
+          <button class="cu-btn line-purple" role="button" aria-disabled="false" style="height:100px;width:100%">
+            <text class="cuIcon-emoji lg text-purple"></text><text style='display:inline-block;width:5px'></text>卫生评比
+          </button>
+        </view>
+      </view> -->
+    </view>
+  </view>

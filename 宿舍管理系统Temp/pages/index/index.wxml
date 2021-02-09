@@ -1,0 +1,43 @@
+//
+//欢迎页面
+//
+<cu-custom bgColor="bg-gradual-blue">
+  <view slot="content">高校智慧宿舍系统</view>
+</cu-custom>
+
+<view class="margin-xl padding-xl bg-white radius shadow shadow-lg">
+  <view class="flex justify-center">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='cu-btn round bg-green shadow'> 获取头像昵称 </button>
+    <block wx:else>
+      <view class='text-center'>
+        <view class="cu-avatar xl round solids" style="background-image:url({{userInfo.avatarUrl}})"></view>
+        <view class="padding">{{userInfo.nickName}}</view>
+      </view>
+    </block>
+  </view>
+    
+  </view>
+  <form >
+      <view class="cu-form-group margin-top">
+		    <view class="title">姓名</view>
+		    <input placeholder="请输入姓名！" name="username" bindinput="username"></input>
+	    </view>
+      <view class="cu-form-group">
+		    <view class="title">密码</view>
+		    <input placeholder="请输入密码！" name="password" password="true" bindinput="password"></input>
+	    </view>
+      <view class="cu-form-group">
+        <view class="title">身份</view>
+        <radio-group class="radio-group" bindchange="radioChange">
+				  学生<text style='display:inline-block;width:10px'></text><radio class="blue radio"  style="margin-right:10px"  value="2"></radio>
+          教师<text style='display:inline-block;width:10px'></text><radio class="blue radio"  style="margin-right:10px"  value="3"></radio>
+        </radio-group>
+	    </view>
+      <view class="padding flex flex-direction">
+       <button class="cu-btn bg-blue lg" bindtap="login">登录</button>
+        <button class="cu-btn bg-cyan margin-tb-sm lg" bindtap="gotoIdentitySelect">注册</button>
+      </view>
+    </form>
+<view class="text-center margin-top">
+  <text class="text-grey text-xl">{{motto}}</text>
+</view>

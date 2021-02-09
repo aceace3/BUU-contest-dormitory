@@ -1,0 +1,37 @@
+//
+ //教师端我的班级页 
+ //
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">高校智慧宿舍系统</view>
+</cu-custom>
+<view class="cu-bar bg-white " style="margin-top:0">
+  <view class="action">
+    <text class="cuIcon-title text-green "></text><text> 我的班级</text>
+  </view>
+</view>
+<view class="padding-sm radius shadow bg-white" style=" margin-top:5px">
+  <view class="cu-list menu">
+    <!-- <view class="cu-item" bindtap="gotoClassStuList" data-classNameData="12123">
+      <view class="content">
+        <text class="cuIcon-playfill text-purple"></text><text class="text-grey">班级01</text>
+      </view>
+    </view>
+
+    <view class="cu-item">
+      <view class="content">
+        <text class="cuIcon-playfill text-purple"></text><text class="text-grey">班级02</text>
+      </view>
+    </view> -->
+
+        <view wx:for="{{list}}" class="forList">
+          <view class="cu-item" style="height:20px;line-height:20px" bindtap="gotoClassStuList" data-classnamedata="{{item.name}}">
+            <view class="content">
+              <text class="cuIcon-playfill text-purple"></text><text class="text-grey">{{item.name}}</text>
+            </view>
+          </view>
+        </view>
+
+
+  </view>
+</view>

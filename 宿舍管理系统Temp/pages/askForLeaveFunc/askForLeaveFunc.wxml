@@ -1,0 +1,59 @@
+//
+//学生端请假页
+//
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">高校智慧宿舍系统</view>
+</cu-custom>
+<view class="padding-sm radius shadow-warp bg-white text-red" style=" margin-top:0">*仅支持提前请假，如遇紧急情况请直接联系教师！</view>
+<view class="cu-bar justify-center bg-white margin-top">
+    <view class="action sub-title">
+      <text class="text-xl text-bold text-green">请假条</text>
+      <text class="bg-green" style="width:1.5rem"></text>
+      <!-- last-child选择器-->
+    </view>
+</view>
+<form>
+  <view class="cu-form-group">
+		<view class="title">开始日期</view>
+		<picker mode="date" value="{{beginDate}}" start="2015-09-01" end="2200-09-01" bindchange="beginDateChange">
+			<view class="picker">
+				{{beginDate}}
+			</view>
+		</picker>
+	</view>
+  <view class="cu-form-group">
+		<view class="title">结束日期</view>
+		<picker mode="date" value="{{endDate}}" start="2015-09-01" end="2200-09-01" bindchange="endDateChange">
+			<view class="picker">
+				{{endDate}}
+			</view>
+		</picker>
+	</view>
+  <view class="cu-form-group align-start">
+		<view class="title">请假理由</view>
+		<textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaInput"></textarea>
+	</view>
+  <!-- <view class="cu-bar btn-group">
+    <button class="cu-btn bg-blue shadow-blur round">提交</button>
+  </view> -->
+ <view class="cu-bar margin-top btn-group">
+    <button class="cu-btn bg-green shadow-blur round" bindtap="showModal" data-target="Modal">提交</button>
+</view>
+<!-- modal -->
+<view class="cu-modal {{modalName=='Modal'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">提交成功</view>
+      <view class="action" bindtap="hideModal">
+        <text class="cuIcon-close text-red"></text>
+      </view>
+    </view>
+    <view class="padding-xl">
+      <view>您的请假申请已提交成功！</view>
+      <view>请注意查看教师批复！</view>
+    </view>
+  </view>
+</view>
+
+</form>

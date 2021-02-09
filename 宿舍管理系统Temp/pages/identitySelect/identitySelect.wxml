@@ -1,0 +1,21 @@
+//
+//注册用户时请选择身份
+//
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">高校智慧宿舍系统</view>
+</cu-custom>
+
+
+<view class="margin-sm padding-xl bg-white radius shadow shadow-lg" style="margin-top:100px">
+  <view class="cu-bar justify-center bg-white">
+    <view class="action sub-title">
+      <text class="text-xl text-bold text-blue">选择身份</text>
+      <text class="text-ABC text-blue">IDENTITY</text>
+    </view>
+  </view>
+   <view class="padding flex flex-direction">
+        <button class="cu-btn bg-blue lg" bindtap="stuRegister">学生注册</button>
+        <button class="cu-btn bg-cyan margin-tb-sm lg" bindtap="teacherRegister">教师注册</button>
+      </view>
+</view>

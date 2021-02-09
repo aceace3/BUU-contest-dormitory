@@ -1,0 +1,47 @@
+//
+//学生端我的页
+//
+<cu-custom bgColor="bg-gradual-blue">
+  <view slot="content">高校智慧宿舍系统</view>
+</cu-custom>
+
+<view class="cu-bar  solid-bottom" style="background:#f5d985;width:100%;margin-top:0">
+  <view class="action">
+    <text class="cuIcon-title text-blue"></text>公告
+  </view>
+</view>
+<view class="padding bg-white" style="background:#fef2ce;width:100%">
+  <view class="text-left padding">{{content}}</view>
+  <view class="text-left padding"> </view>
+  <view class="text-left padding"> </view>
+  <!-- <view class="text-center padding">我于杀戮之中绽放 ,亦如黎明中的花朵</view> -->
+</view>
+
+<view class="padding-sm radius shadow-warp bg-white" style=" margin-top:15px">
+  <view class="cu-list menu">
+    <view class="cu-item">
+      <view class="content">
+        <text class="cuIcon-circlefill text-green"></text><text class="text-grey">姓名</text><text style='display:inline-block;width:20px'></text><text class="text-grey">{{username}}</text>
+      </view>
+    </view>
+
+    <view class="cu-item">
+      <view class="content">
+        <text class="cuIcon-circlefill text-green"></text><text class="text-grey">学号</text><text style='display:inline-block;width:20px'></text><text class="text-grey">{{studentCode}}</text>
+      </view>
+    </view>
+
+    <view class="cu-item">
+      <view class="content">
+        <text class="cuIcon-circlefill text-green"></text><text class="text-grey">班级</text><text style='display:inline-block;width:20px'></text><text class="text-grey">{{className}}</text>
+      </view>
+    </view>
+
+    <view class="cu-item">
+      <view class="content">
+        <text class="cuIcon-circlefill text-green"></text><text class="text-grey">宿舍号</text><text style='display:inline-block;width:20px'></text><text class="text-grey">{{dormNumber}}</text>
+      </view>
+    </view>
+
+  </view>
+</view>

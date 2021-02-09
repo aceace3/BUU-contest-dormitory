@@ -1,0 +1,60 @@
+//
+//注册学生
+//
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">高校智慧宿舍系统</view>
+</cu-custom>
+ <view class="cu-bar justify-left bg-white">
+    <view class="action border-title">
+      <text class="text-xl text-bold">学生注册</text>
+      <text class="bg-grey" style="width:2rem"></text>
+      <!-- 底部样式 last-child选择器-->
+    </view>
+  </view>
+  <form>
+    <view class="cu-form-group margin-top">
+      <view class="title">姓名</view>
+      <input bindinput="stuName"></input>
+    </view>
+    <view class="cu-form-group">
+      <view class="title">性别</view>
+      <input bindinput="stuGender"></input>
+    </view>
+    <view class="cu-form-group">
+      <view class="title">学号</view>
+      <input bindinput="stuID"></input>
+    </view>
+     <view class="cu-form-group">
+      <view class="title">手机</view>
+      <input bindinput="stuPhone"></input>
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-blue">
+          +86
+        </view>
+        <view class="cu-tag line-blue">
+          中国大陆
+        </view>
+      </view>
+    </view>
+   
+    <view class="cu-form-group">
+      <view class="title">班级</view>
+      <input placeholder="请不要缩写" bindinput="stuClass"></input>
+    </view>
+     <view class="cu-form-group">
+      <view class="title">宿舍</view>
+      <input placeholder="例：男生楼306-6" bindinput="stuDormitory"></input>
+    </view>
+    <view class="cu-form-group">
+      <view class="title">密码</view>
+      <input bindinput="stuPassword"></input>
+    </view>
+    <view class="cu-form-group">
+      <view class="title">确认密码</view>
+      <input bindinput="stuConfirmPass"></input>
+    </view>
+    <view class="padding flex flex-direction">
+      <button class="cu-btn bg-blue lg" bindtap="registerBtn">确认注册</button>
+    </view>
+  </form>

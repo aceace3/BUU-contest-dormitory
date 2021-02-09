@@ -1,0 +1,49 @@
+//
+//学生端打卡记录页
+//
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">高校智慧宿舍系统</view>
+</cu-custom>
+
+<view class="padding-sm radius shadow-warp bg-white">
+  <view class='wrap'>
+      <view>
+          <view class='date-show'>
+              <view class='lt-arrow' bindtap='lastMonth'>
+                  <text class="cuIcon-back text-green"></text>
+              </view>
+              {{year}}年{{month}}月
+              <view class='rt-arrow' bindtap='nextMonth'>
+                  <text class="cuIcon-right text-green"></text>
+             </view>
+         </view>
+         
+     </view>
+     <view class='header'>
+         <view wx:for='{{date}}' class='{{(index == todayIndex) && isTodayWeek ? "weekMark" : ""}}'>{{item}}<view></view></view>
+     </view>
+     <view class='date-box'>
+            <!-- <view wx:for='{{dateArr}}' class='{{isToday == item.isToday ? "nowDay" : ""}}'> -->
+            <!-- <view wx:for='{{dateArr}}'> -->
+            <view wx:for='{{dateArr}}' class='{{1 == item.isSign ? "nowDay" : ""}}'>
+
+                <view class='date-head'>
+                    <view >{{item.dateNum}}</view>
+                </view>
+            </view>
+
+     </view>
+ </view>
+ </view>
+<view class="padding text-center">
+  <view class="padding-lr bg-white">
+    <view class="solid-bottom padding">
+      <text class="text-grey">您一共打卡 <text> {{sumDays}} </text>天!</text>
+    </view>
+    <!-- <view class="solid-bottom padding">
+      <text class="text-gray">未按规定打卡 <text class="text-red">0 </text>天!</text>
+    </view> -->
+  </view>
+</view>
+<button bindtap="isSignFunc" disabled="{{isDisabled}}">点击查看签到天数</button>

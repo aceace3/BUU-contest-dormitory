@@ -1,0 +1,112 @@
+//
+ //教师端 请假批准
+ //
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">高校智慧宿舍系统</view>
+</cu-custom>
+<view class="cu-bar bg-white " style="margin-bottom:10px">
+  <view class="action">
+    <text class="cuIcon-title text-green "></text><text> 请假批准</text>
+  </view>
+</view>
+
+<view wx:for="{{approvalList}}">
+	<view class=" padding-xl">
+		<form>
+			<view class="cu-form-group">
+				<view class="title">姓名</view>
+				<view class="content text-grey">{{item.stuName}}</view>
+			</view>
+			<view class="cu-form-group">
+				<view class="title">性别</view>
+				<view class="content text-grey">{{item.gender}}</view>
+			</view>
+			<view class="cu-form-group">
+				<view class="title">班级</view>
+				<view class="content text-grey">{{item.className}}</view>
+			</view>
+			<view class="cu-form-group">
+				<view class="title">请假时间</view>
+				<view class="content text-grey">{{item.aflTime}}</view>
+			</view>
+			<view class="cu-form-group">
+				<view class="title">请假原因</view>
+				<view class="content text-grey">{{item.reason}}</view>
+			</view>
+			<view wx:if="{{item.isHandle==0}}">
+				<view class="cu-form-group align-start">
+					<view class="title">批复意见</view>
+					<textarea  bindinput='replyText'   maxlength="-1" disabled="{{modalName!=null}}" placeholder="选填" style="border:1px solid silver">
+					</textarea>
+				</view>
+			</view>
+			<view class="cu-form-group">
+				<view class="title">申请时间</view>
+				<view class="content text-grey">{{item.created}}</view>
+			</view>
+			<view wx:if="{{item.isHandle==0}}">
+					<view class="cu-form-group flex justify-center">
+						<view class="cu-bar margin-top btn-group">
+								<button class="cu-btn bg-green shadow-blur round" bindtap="showModal" data-target="Modal" data-id="{{item.id}}">同意</button>
+								<button class="cu-btn bg-red shadow-blur round" bindtap="showModal" data-target="Modal" data-id="{{item.id}}">拒绝</button>
+						</view>
+					</view>
+			</view>
+			<view wx:if="{{item.isHandle!=0}}">
+						<view class="cu-form-group">
+			<view wx:if="{{item.isHandle==1}}"><view class="title text-green">已同意</view></view>
+			<view wx:if="{{item.isHandle==2}}"><view class="title text-red">拒绝</view></view>
+			<view class="content text-grey">( {{item.reply}} )</view>		
+		</view>
+		<view class="cu-form-group">
+			<view class="title">批复时间</view>
+			<view class="content text-grey">{{item.replyTime}}</view>
+		</view>
+			</view>
+		</form>
+	</view>
+</view>
+
+<!-- <view class=" padding-xl">
+	<form>
+		<view class="cu-form-group">
+			<view class="title">姓名</view>
+			<view class="content text-grey">小明</view>
+		</view>
+		<view class="cu-form-group">
+			<view class="title">性别</view>
+			<view class="content text-grey">男</view>
+		</view>
+		<view class="cu-form-group">
+			<view class="title">班级</view>
+			<view class="content text-grey">计算机1903s</view>
+		</view>
+		<view class="cu-form-group">
+			<view class="title">请假时间</view>
+			<view class="content text-grey">2020-2-14</view>
+		</view>
+		<view class="cu-form-group">
+			<view class="title">请假原因</view>
+			<view class="content text-grey">回家</view>
+		</view>
+		<view class="cu-form-group">
+			<view class="title text-green">已同意</view>
+			<view class="content text-grey">可以</view>		
+		</view>
+		<view class="cu-form-group">
+			<view class="title"></view>
+			<view class="content text-grey">2020-2-12 22:30</view>
+		</view>
+		<view class="cu-form-group flex justify-center" style="display:none">
+			<view class="cu-bar margin-top btn-group">
+					<button class="cu-btn bg-green shadow-blur round" bindtap="showModal" data-target="Modal">同意</button>
+					<button class="cu-btn bg-red shadow-blur round" bindtap="showModal" data-target="Modal">拒绝</button>
+			</view>
+		</view>
+	</form>
+
+</view> -->
+
+
+

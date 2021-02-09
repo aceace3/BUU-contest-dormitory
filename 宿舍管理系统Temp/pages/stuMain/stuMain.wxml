@@ -1,0 +1,28 @@
+//
+//学生端首页
+//
+<cu-custom bgColor="bg-gradual-blue">
+  <view slot="content">高校智慧宿舍系统</view>
+</cu-custom>
+<view class="padding-sm radius shadow-warp bg-white" style=" margin-top:0">规定打卡时间：22:55-23:05
+<text style='display:inline-block;width:20px'></text>打卡地点：宿舍楼内
+<text style='display:inline-block;width:4000px'></text><text style="color:brown">未按规定进行打卡将会通知辅导员</text></view>
+  <view class=" margin-sm shadow bg-white" style="height:300px;">
+   <map class="map" longitude="{{longitude}}" latitude="{{latitude}}" markers="{{markers}}" covers="{{covers}}" show-location>
+    <cover-view>
+    经度：{{longitude}}
+    </cover-view>
+     <cover-view>
+    纬度：{{latitude}}
+    </cover-view>
+    <cover-view>
+    速度：{{speed}}
+    </cover-view>
+    <cover-view>
+    精度：{{accuracy}}
+    </cover-view>
+  </map>
+</view>
+<view class="padding flex flex-direction">
+  <button class="cu-btn bg-gradual-purple margin-tb-sm lg" bindtap="dakaBtn">打卡</button>
+</view>
